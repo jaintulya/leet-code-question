@@ -1,15 +1,13 @@
-// Last updated: 4/30/2026, 2:38:20 PM
+// Last updated: 5/1/2026, 6:24:00 PM
 1class Solution {
 2public:
 3    int countKeyChanges(string s) {
 4        int count = 0;
-5
-6        for (int i = 1; i < s.size(); i++) {
-7            if (tolower(s[i]) != tolower(s[i - 1])) {
-8                count++;
-9            }
-10        }
-11
-12        return count;
-13    }
-14};
+5        for (int i = 1; i < s.size(); i++) {
+6            if (tolower(s[i]) != tolower(s[i - 1])) {
+7                count++;
+8            }
+9        }
+10        return count;
+11    }
+12};
