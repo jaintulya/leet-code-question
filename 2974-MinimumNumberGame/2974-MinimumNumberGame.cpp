@@ -1,12 +1,15 @@
-// Last updated: 4/30/2026, 3:27:13 AM
+// Last updated: 5/1/2026, 7:30:40 PM
 1class Solution {
 2public:
 3    vector<int> numberGame(vector<int>& nums) {
-4      sort(nums.begin(),nums.end());
+4        sort(nums.begin(), nums.end());
 5
-6      for(int i=0 ; i<nums.size();i+=2){
-7        swap(nums[i],nums[i+1]);
-8      }
-9      return nums;
-10    }
-11};
+6        vector<int> result;
+7
+8        for (int i = 0; i < nums.size(); i += 2) {
+9            result.push_back(nums[i+1]);
+10            result.push_back(nums[i]);
+11        }
+12        return result;
+13    }
+14};
