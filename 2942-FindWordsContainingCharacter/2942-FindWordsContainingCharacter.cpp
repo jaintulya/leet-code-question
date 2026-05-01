@@ -1,18 +1,11 @@
-// Last updated: 5/1/2026, 6:38:59 PM
+// Last updated: 5/1/2026, 7:08:37 PM
 1class Solution {
 2public:
-3    vector<int> findWordsContaining(vector<string>& words, char x) {
-4        vector<int> index;
-5
-6        for(int i=0 ; i<words.size();i++){
-7
-8            for(char ch :words[i]){
-9                if(ch==x){
-10                    index.push_back(i);
-11                    break;
-12                }
-13            }
-14        }
-15        return index;
-16    }
-17};
+3    int numberOfEmployeesWhoMetTarget(vector<int>& hours, int target) {
+4        int count=0;
+5        for(int i :hours){
+6            if(i>=target) count++;
+7        }
+8        return count;
+9    }
+10};
