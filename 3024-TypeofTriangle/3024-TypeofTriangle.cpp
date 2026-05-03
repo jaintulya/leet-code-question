@@ -1,17 +1,16 @@
-// Last updated: 5/3/2026, 5:15:24 PM
+// Last updated: 5/3/2026, 5:34:44 PM
 1class Solution {
 2public:
-3    int mostWordsFound(vector<string>& sentences) {
-4        int maxword = 0;
-5
-6        for (string s : sentences) {
-7            int count = 1;
-8            for (char ch : s) {
-9                if(ch== ' ') count++;
+3    int countDigits(int num) {
+4        int n = num; //121
+5        int count = 0;
+6        while (n > 0) {
+7            int digit= n%10;  //1 //2 //1
+8            if(num%digit==0){  //121%1 
+9                count++; //count=2
 10            }
-11            maxword= max(maxword,count);
-12
-13        }
-14        return maxword;
-15    }
-16};
+11            n=n/10; //12 //1 //0
+12        }
+13        return count;
+14    }
+15};
