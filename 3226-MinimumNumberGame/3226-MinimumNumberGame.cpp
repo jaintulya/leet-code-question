@@ -1,0 +1,15 @@
+// Last updated: 5/3/2026, 10:37:00 PM
+class Solution {
+public:
+    vector<int> numberGame(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+
+        vector<int> result;
+
+        for (int i = 0; i < nums.size(); i += 2) {
+            result.push_back(nums[i+1]);
+            result.push_back(nums[i]);
+        }
+        return result;
+    }
+};
